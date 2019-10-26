@@ -24,7 +24,7 @@ public extension UIScrollView {
         let bakFrame     = self.frame
         let bakOffset    = self.contentOffset
         let bakSuperView = self.superview
-        let bakIndex     = self.superview?.subviews.index(of: self)
+        let bakIndex     = self.superview?.subviews.firstIndex(of: self)
         
         // Scroll To Bottom show all cached view
         if self.frame.size.height < self.contentSize.height {
