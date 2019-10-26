@@ -11,7 +11,7 @@ import WebKit
 
 public extension UIScrollView {
     
-    public func swContentCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
+    func swContentCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
         
         self.isCapturing = true
         
@@ -86,7 +86,7 @@ public extension UIScrollView {
     
     // Simulate People Action, all the `fixed` element will be repeate
     // SwContentCapture will capture all content without simulate people action, more perfect.
-    public func swContentScrollCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
+    func swContentScrollCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
         
         self.isCapturing = true
         
@@ -139,11 +139,11 @@ public extension UIScrollView {
 
 public extension UIWebView {
     
-    public func swContentCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
+    func swContentCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
         self.scrollView.swContentCapture(completionHandler)
     }
     
-    public func swContentScrollCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
+    func swContentScrollCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
         self.scrollView.swContentScrollCapture(completionHandler)
     }
     
