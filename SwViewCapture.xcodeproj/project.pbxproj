@@ -11,6 +11,7 @@
 		39CC90871C785ED60057B0CE /* WKWebView+SwCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC90861C785ED60057B0CE /* WKWebView+SwCapture.swift */; };
 		39CC90BF1C8033180057B0CE /* UIScrollView+SwCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC90BE1C8033180057B0CE /* UIScrollView+SwCapture.swift */; };
 		39D6678D1BE2024900BF0BD7 /* SwViewCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D6678C1BE2024900BF0BD7 /* SwViewCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71BF73F23643D390009E074 /* UIWebView+SwCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71BF73E23643D390009E074 /* UIWebView+SwCapture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		39D667891BE2024900BF0BD7 /* SwViewCapture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwViewCapture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D6678C1BE2024900BF0BD7 /* SwViewCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwViewCapture.h; sourceTree = "<group>"; };
 		39D6678E1BE2024900BF0BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71BF73E23643D390009E074 /* UIWebView+SwCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWebView+SwCapture.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 				39D6678C1BE2024900BF0BD7 /* SwViewCapture.h */,
 				39D6678E1BE2024900BF0BD7 /* Info.plist */,
 				394BA35E1C7451F60012FCB5 /* UIView+SwCapture.swift */,
-				39CC90861C785ED60057B0CE /* WKWebView+SwCapture.swift */,
 				39CC90BE1C8033180057B0CE /* UIScrollView+SwCapture.swift */,
+				39CC90861C785ED60057B0CE /* WKWebView+SwCapture.swift */,
+				B71BF73E23643D390009E074 /* UIWebView+SwCapture.swift */,
 			);
 			path = SwViewCapture;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71BF73F23643D390009E074 /* UIWebView+SwCapture.swift in Sources */,
 				39CC90871C785ED60057B0CE /* WKWebView+SwCapture.swift in Sources */,
 				394BA35F1C7451F60012FCB5 /* UIView+SwCapture.swift in Sources */,
 				39CC90BF1C8033180057B0CE /* UIScrollView+SwCapture.swift in Sources */,

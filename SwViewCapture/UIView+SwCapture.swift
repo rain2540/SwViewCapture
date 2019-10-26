@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import ObjectiveC
 
 private var SwViewCaptureKey_IsCapturing: String = "SwViewCapture_AssoKey_isCapturing"
 
@@ -18,7 +17,7 @@ public extension UIView {
         // Do nothing, use for swizzling
     }
     
-    var isCapturing:Bool! {
+    var isCapturing: Bool! {
         get {
             let num = objc_getAssociatedObject(self, &SwViewCaptureKey_IsCapturing)
             if num == nil {
@@ -27,7 +26,7 @@ public extension UIView {
             
             if let numObj = num as? NSNumber {
                 return numObj.boolValue
-            }else {
+            } else {
                 return false
             }
         }
@@ -65,7 +64,7 @@ public extension UIView {
         
         if (swContainsWKWebView()) {
             self.drawHierarchy(in: bounds, afterScreenUpdates: true)
-        }else{
+        } else {
             self.layer.render(in: context!)
         }
         let capturedImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -77,5 +76,5 @@ public extension UIView {
         
         completionHandler(capturedImage)
     }
+    
 }
-
