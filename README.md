@@ -26,7 +26,7 @@ SwViewCapture支持截取网页以及ScrollView的所有内容
 4. Flasing will not appear in the process of Screenshots.
 	* SwCaptureView use a fake screenshots as a cover which over target view. All the action of target will be hidden below the fake screenshots.
 
-###功能
+## 功能
 
 1. API更容易使用.
 	* 使用Extension去封装API
@@ -63,7 +63,7 @@ view.swContentCapture { (capturedImage) -> Void in
 }
 ```
 
-###用法
+## 用法
 
 * 普通截屏(屏幕大小)
 
