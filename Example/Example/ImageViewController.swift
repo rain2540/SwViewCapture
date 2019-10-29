@@ -14,7 +14,7 @@ class ImageViewController: UIViewController {
     var imageView: UIImageView?
     var image: UIImage?
     
-    init(image: UIImage){
+    init(image: UIImage) {
         self.image = image
         super.init(nibName: nil, bundle: nil)
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class STCollectionViewDemoController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+class STCollectionViewDemoController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let cellIdentify = "reuseableCellIdentify"
     var collectView : UICollectionView?
@@ -19,7 +19,7 @@ class STCollectionViewDemoController: UIViewController, UICollectionViewDelegate
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Capture", style: UIBarButtonItem.Style.plain, target: self, action: #selector(STTableViewDemoController.didCaptureBtnClicked(_:)))
         
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical;
+        flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
         collectView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         
         collectView?.dataSource = self
@@ -37,27 +37,27 @@ class STCollectionViewDemoController: UIViewController, UICollectionViewDelegate
     
     // MARK: UICollectionView DataSource & Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 500;
+        return 500
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectView?.dequeueReusableCell(withReuseIdentifier: cellIdentify, for: indexPath);
+        let cell = collectView?.dequeueReusableCell(withReuseIdentifier: cellIdentify, for: indexPath)
         
         if indexPath.row % 2 == 1 {
             cell?.contentView.backgroundColor = UIColor.orange
-        }else {
+        } else {
             cell?.contentView.backgroundColor = UIColor.yellow
         }
         
-        return cell!;
+        return cell!
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1;
+        return 1
     }
 
     // MARK : Capture Button Events
-    @objc func didCaptureBtnClicked(_ button: UIButton){
+    @objc func didCaptureBtnClicked(_ button: UIButton) {
         
         collectView?.swContentCapture({ (capturedImage) -> Void in
             let vc = ImageViewController(image: capturedImage!)

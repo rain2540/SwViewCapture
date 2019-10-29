@@ -52,7 +52,7 @@ class STTableViewDemoController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // MARK : Events
-    @objc func didCaptureBtnClicked(_ button: UIButton){
+    @objc func didCaptureBtnClicked(_ button: UIButton) {
         
         tableView?.swContentCapture({ (capturedImage) -> Void in
             let vc = ImageViewController(image: capturedImage!)

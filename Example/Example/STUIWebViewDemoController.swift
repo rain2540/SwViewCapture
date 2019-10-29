@@ -28,7 +28,7 @@ class STUIWebViewDemoController: UIViewController {
     }
     
     // MARK: Events
-    @objc func didCaptureBtnClicked(_ button: UIButton){
+    @objc func didCaptureBtnClicked(_ button: UIButton) {
         webView?.swContentCapture({ (capturedImage) -> Void in
             
             UIImageWriteToSavedPhotosAlbum(capturedImage!, self, nil, nil)

@@ -111,16 +111,16 @@
 			children = (
 				39D667A01BE202AC00BF0BD7 /* STDemoAppDelegate.swift */,
 				39D667B41BE202FE00BF0BD7 /* STMenuDemoViewController.swift */,
+				39D667B71BE202FE00BF0BD7 /* STViewDemoController.swift */,
 				39D667B51BE202FE00BF0BD7 /* STScrollViewDemoController.swift */,
 				39D667B61BE202FE00BF0BD7 /* STTableViewDemoController.swift */,
-				39D667B71BE202FE00BF0BD7 /* STViewDemoController.swift */,
 				39D667B81BE202FE00BF0BD7 /* STWKWebViewDemoController.swift */,
 				394BA3531C71D1120012FCB5 /* STUIWebViewDemoController.swift */,
+				3916547D1EE7C94200A2E90B /* STCollectionViewDemoController.swift */,
 				394BA3601C7461880012FCB5 /* ImageViewController.swift */,
 				39D667A71BE202AC00BF0BD7 /* Assets.xcassets */,
 				39D667A91BE202AC00BF0BD7 /* LaunchScreen.storyboard */,
 				39D667AC1BE202AC00BF0BD7 /* Info.plist */,
-				3916547D1EE7C94200A2E90B /* STCollectionViewDemoController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";

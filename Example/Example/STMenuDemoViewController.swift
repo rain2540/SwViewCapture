@@ -10,29 +10,28 @@ import UIKit
 
 class STMenuDemoViewController: UIViewController {
     
-    fileprivate var viewBtn: UIButton?
-    fileprivate var scrollViewBtn: UIButton?
-    fileprivate var tableViewBtn: UIButton?
-    fileprivate var webViewBtn: UIButton?
-    fileprivate var oldWebViewBtn: UIButton?
-    fileprivate var collectionBtn: UIButton?
+    private var viewBtn: UIButton?
+    private var scrollViewBtn: UIButton?
+    private var tableViewBtn: UIButton?
+    private var webViewBtn: UIButton?
+    private var oldWebViewBtn: UIButton?
+    private var collectionBtn: UIButton?
     
-// MARK: Life Cycle
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        initViews();
+        
+        initViews()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-// MARK: Private Methods
+    // MARK: Private Methods
     
-    fileprivate func initViews(){
+    private func initViews() {
         view.backgroundColor = UIColor.white
         
         let viewBtn = UIButton()
@@ -77,17 +76,17 @@ class STMenuDemoViewController: UIViewController {
         self.tableViewBtn = tableViewBtn
         self.webViewBtn = webViewBtn
         self.oldWebViewBtn = oldWebViewBtn
-        self.collectionBtn = collectBtn;
+        self.collectionBtn = collectBtn
     }
     
-// MARK: Layout Views
+    // MARK: Layout Views
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let btnHeight:CGFloat = 30, btnWidth:CGFloat = 180.0, spanHeight:CGFloat = 20.0;
-        let btnX = view.frame.size.width / 2 - btnWidth / 2;
-        let midY = view.frame.size.height / 2;
+        let btnHeight:CGFloat = 30, btnWidth:CGFloat = 180.0, spanHeight:CGFloat = 20.0
+        let btnX = view.frame.size.width / 2 - btnWidth / 2
+        let midY = view.frame.size.height / 2
         
         viewBtn?.frame       = CGRect(x: btnX, y: midY - btnHeight * 3 - spanHeight * 2.5, width: btnWidth, height: btnHeight)
         scrollViewBtn?.frame = CGRect(x: btnX, y: midY - btnHeight * 2 - spanHeight * 1.5, width: btnWidth, height: btnHeight)
@@ -98,26 +97,26 @@ class STMenuDemoViewController: UIViewController {
         collectionBtn?.frame = CGRect(x: btnX, y: midY + spanHeight * 2.5 + btnHeight * 2, width: btnWidth, height: btnHeight)
     }
     
-// MARK: Events
+    // MARK: Events
     
-    @objc func didBtnClicked(_ button: UIButton){
-        if(button == viewBtn) {
+    @objc private func didBtnClicked(_ button: UIButton) {
+        if (button == viewBtn) {
             let vc = STViewDemoController()
             navigationController?.pushViewController(vc, animated: true)
-        }else if(button == scrollViewBtn) {
+        } else if (button == scrollViewBtn) {
             let vc = STScrollViewDemoController()
             navigationController?.pushViewController(vc, animated: true)
-        }else if(button == tableViewBtn) {
+        } else if (button == tableViewBtn) {
             let vc = STTableViewDemoController()
             navigationController?.pushViewController(vc, animated: true)
-        }else if(button == webViewBtn) {
+        } else if (button == webViewBtn) {
             let vc = STWKWebViewDemoController()
-//            navigationController?.presentViewController(vc, animated: true, completion: nil)
+            //navigationController?.presentViewController(vc, animated: true, completion: nil)
             navigationController?.pushViewController(vc, animated: true)
-        }else if(button == oldWebViewBtn) {
+        } else if (button == oldWebViewBtn) {
             let vc = STUIWebViewDemoController()
             navigationController?.pushViewController(vc, animated: true)
-        }else if(button == collectionBtn) {
+        } else if (button == collectionBtn) {
             let vc = STCollectionViewDemoController()
             navigationController?.pushViewController(vc, animated: true)
         }
