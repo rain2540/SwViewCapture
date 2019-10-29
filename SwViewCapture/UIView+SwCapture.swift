@@ -60,7 +60,7 @@ public extension UIView {
         
         let context = UIGraphicsGetCurrentContext()
         context?.saveGState()
-        context?.translateBy(x: -self.frame.origin.x, y: -self.frame.origin.y);
+        context?.translateBy(x: -self.frame.origin.x, y: -self.frame.origin.y)
         
         if (swContainsWKWebView()) {
             self.drawHierarchy(in: bounds, afterScreenUpdates: true)
@@ -69,7 +69,7 @@ public extension UIView {
         }
         let capturedImage = UIGraphicsGetImageFromCurrentImageContext()
         
-        context?.restoreGState();
+        context?.restoreGState()
         UIGraphicsEndImageContext()
         
         self.isCapturing = false
