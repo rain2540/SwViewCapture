@@ -39,7 +39,7 @@ public extension UIView {
     // Ref: chromium source - snapshot_manager, fix wkwebview screenshot bug.
     // https://chromium.googlesource.com/chromium/src.git/+/46.0.2478.0/ios/chrome/browser/snapshots/snapshot_manager.mm
     func swContainsWKWebView() -> Bool {
-        if self.isKind(of: WKWebView.self) {
+        if self is WKWebView {
             return true
         }
         for subView in self.subviews {
